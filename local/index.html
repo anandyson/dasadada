@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DS wedding</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+  <link rel="shortcut icon" href="images/favicon.ico">
+	
+  <style>
+	  .bg-image {
+	  /* The image used */
+	  background-image: url('bg1.jpg');
+
+	  /* Add the blur effect */
+	  /* filter: blur(8px); */
+	  /* -webkit-filter: blur(8px); */
+
+	  /* Full height */
+	  height: 100%; 
+
+	  /* Center and scale the image nicely */
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+	.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+	@media only screen and (min-width: 769px) {
+	  body {
+		display:none;
+	  }
+	}
+    @font-face {
+	  font-family: Roboto;
+	  src: url('css/fonts/Roboto-Regular.ttf');
+	  font-weight:900
+    }
+    @font-face {
+	  font-family: bannerFont;
+	  src: url('css/fonts/Precious.ttf');
+	  font-weight:900
+	}
+    html, body {
+        height: 100%;
+        margin: 0px;
+        /* overflow:hidden; */
+    }
+    #uname{
+    	text-transform:capitalize
+    }
+    body{
+    	text-align:center;
+/*     	background: url('bg1.jpg'); */
+    	font-family:bannerFont;
+/*     	background-size:cover;
+    	background-position: 44%; */
+    }
+    .container{
+    	/* height: 100%; */
+    	/* margin-top:-20px; */
+ }
+    a{
+    font-size:28px
+    }
+	  *{
+  color: #fff !important;
+  text-shadow: 0px 0px 9px #981315;
+}
+h1 {
+    padding-top: 36%;
+    word-wrap: break-word;
+    font-size: 32px;
+    font-weight: 900;
+}
+p,a {
+    font-size: 25px;
+    font-family:'Roboto';
+    margin: 12% auto;
+}
+a {
+    text-decoration: none;
+    background-color: #10c9d0;
+    border-radius: 6px;
+    padding: 5px 15px;
+    box-shadow: 0px 3px 20px #0006;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+}
+    </style>
+</head>
+
+<body>
+<div class="bg-image"></div>
+
+<div class="container bg-text ">
+
+  <h1 class="animated fadeInUp delay-1s">Hi, <span id="uname">dsdsa</span></h1>
+<p class="animated fadeInUp delay-2s">we invite you to celebrate our wedding</p>
+<a  class="animated fadeInUp delay-3s" target="_self" href="https://rajadhara.github.io">JOIN US</a>
+</div>
+    <script>
+    var uname =  window.location.href.split('/');
+	    var lastval = uname[uname.length-1];
+	    if( lastval === "friends"){
+	    	window.open("https://rajadhara.github.io/friends.html",_self);
+	    }
+  document.getElementById("uname").innerHTML = 
+  uname[uname.length-1];
+  document.title = "Hi, "+uname[uname.length-1];
+  </script>
+</body>
+</html>
